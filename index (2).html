@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SanmokuNarabe</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div id="turn" class="hideable open">
+            <div class="mark"></div>のターン
+        </div>
+        <div id="sanmoku">
+            <table id="field">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="mark"></div>
+                        </td>
+                        <td>
+                            <div class="mark"></div>
+                        </td>
+                        <td>
+                            <div class="mark"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="mark"></div>
+                        </td>
+                        <td>
+                            <div class="mark"></div>
+                        </td>
+                        <td>
+                            <div class="mark"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="mark"></div>
+                        </td>
+                        <td>
+                            <div class="mark"></div>
+                        </td>
+                        <td>
+                            <div class="mark"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="result">
+            <div id="winning" class="hideable">
+                <div class="mark"></div>の勝利
+            </div>
+            <div id="draw" class="hideable">
+                引き分け
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
