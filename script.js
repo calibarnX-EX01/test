@@ -64,7 +64,6 @@ function isAbleToMark(rowIndex,columnIndex){
 
     この関数を編集
 
-    注：以下のreturn文は例です。そのままでは不正解です。
     */
     return true;
 }
@@ -76,12 +75,10 @@ function isAbleToMark(rowIndex,columnIndex){
  * @returns {void}
  */
 function updateStates(rowIndex,columnIndex){
-    /*
-
-    この関数を編集
-
-    */
-    return;
+    let turnNum*-1;
+    let cnt+=1;
+    const tableArrs = [
+];
 }
 
 /**
@@ -92,12 +89,8 @@ function updateStates(rowIndex,columnIndex){
  * @returns {[false,undefined,undefined]|[true,false,undefined]|[true,true,markNumType]}
  */
 function getStates(){
-    /*
 
-    この関数を編集
-
-    注：以下のreturn文は例です。そのままでは不正解です。
-    */
+    
     return [false,undefined,undefined];
 }
 
