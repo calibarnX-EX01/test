@@ -60,7 +60,7 @@ table.addEventListener("click",clickEvent);/* クリック時の実行関数を�
  * @returns {boolean}
  */
 function isAbleToMark(rowIndex,columnIndex){
-    var a;
+    var a=0;
     if(tableArrs[rowIndex][columnIndex]==0){
        a=true; 
     }else{
