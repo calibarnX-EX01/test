@@ -71,7 +71,7 @@ function isAbleToMark(rowIndex,columnIndex){
  * @returns {void}
  */
 function updateStates(rowIndex,columnIndex){
-    const tableArrs[rowIndex][columnIndex]=turnNum;
+    tableArrs[rowIndex][columnIndex]=turnNum;
      turnNum=turnNum*-1;
      cnt+=1;
 }
