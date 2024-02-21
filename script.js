@@ -158,5 +158,4 @@ function doFinish([isWinning,winningMarkNum]){
         drawBox.classList.add("open");/* 引き分け表示HTML要素を表示 */
     }
     turnBox.classList.remove("open");/* ターン表示HTML要素を非表示にする */
-    table.removeEventListener("click",clickEvent);/* クリックイベントを削除 */
-}
+    table.removeEventListener("click"
