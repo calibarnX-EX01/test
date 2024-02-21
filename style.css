@@ -1,0 +1,119 @@
+:root {
+    --mark-size: 48px;
+    --cell-size: 64px;
+    --view-font-size: 32px;
+    --mark-color: darkgrey;
+    --line-weight: 5px;
+    --border-value: var(--line-weight) solid grey;
+}
+
+body {
+    width: 100%;
+    height: 100dvh;
+    margin: 0px;
+    background-color: green;
+}
+
+div.hideable {
+    visibility: hidden;
+}
+
+div.hideable.open {
+    visibility: visible;
+}
+
+div.mark {
+    width: var(--mark-size);
+    height: var(--mark-size);
+}
+
+div.mark.circle {
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: var(--line-weight) solid var(--mark-color);
+}
+
+div.mark.cross {
+    position: relative;
+}
+
+div.mark.cross::before, div.mark.cross::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--line-weight);
+    height: var(--mark-size);
+    background-color: var(--mark-color);
+    transform-origin: center;
+}
+
+div.mark.cross::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+div.mark.cross::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#turn {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--view-font-size);
+}
+
+#sanmoku {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    place-items: center;
+}
+
+#sanmoku table{
+    border-collapse: collapse;
+    border: none;
+}
+
+#sanmoku td {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border-top: var(--border-value);
+    border-right: none;
+    border-bottom: none;
+    border-left: var(--border-value);
+}
+
+#sanmoku td:first-child {
+    border-left: none;
+}
+
+#sanmoku tr:first-child > td {
+    border-top: none;
+}
+
+#sanmoku div.mark {
+    margin: auto;
+    pointer-events: none;
+}
+
+#result {
+    width: 100%;
+    height: 25%;
+    overflow: hidden;
+    font-size: var(--view-font-size);
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+
+#result > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
