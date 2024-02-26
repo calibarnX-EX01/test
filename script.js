@@ -48,7 +48,16 @@ const tableArrs = [
     [0,0,0],
     [0,0,0]
 ];
-
+const complete_patterns = [
+    [0, 3, 6], // 1列目 (1)
+    [1, 4, 7], // 2列目 (2)
+    [2, 5, 8], // 3列目 (3)
+    [0, 1, 2], // 1行目 (4)
+    [3, 4, 5], // 2行目 (5)
+    [6, 7, 8], // 3行目 (6)
+    [0, 4, 8], // 斜め：左上から右下 (7)
+    [2, 4, 6]  // 斜め：右上から左下 (8)
+  ];
 viewMark(turnMarkEle,turnNum);/* 最初のターンの記号を表示 */
 
 table.addEventListener("click",clickEvent);/* クリック時の実行関数を設定 */
@@ -89,18 +98,16 @@ function updateStates(rowIndex,columnIndex){
  * @returns {[false,undefined,undefined]|[true,false,undefined]|[true,true,markNumType]}
  */
 function getStates(){
-const complete_patterns= [
-    [0, 3, 6], 
-    [1, 4, 7], 
-    [2, 5, 8], 
-    [0, 1, 2], 
-    [3, 4, 5], 
-    [6, 7, 8], 
-    [0, 4, 8], 
-    [2, 4, 6] 
-    ]
-    
-    return [false,undefined,undefined];
+    let results = $("td").get()
+    let completed = false
+for(let ct=0;ct<complete_patterns.length;ct++){
+    let pattern = complete_patterns[cnt]
+    let cell1 = $(results[pattern[0]]).html()
+      let cell2 = $(results[pattern[1]]).html()
+      let cell3 = $(results[pattern[2]]).html()
+      
+}
+    return [completed,undefined,undefined];
 }
 
 /**
