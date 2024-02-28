@@ -108,7 +108,7 @@ for(let ct=0;ct<complete_patterns.length;ct++){
       let cell3 = $(results[pattern[2]]).html()
       
 }
-    return [completed,undefined,undefined];
+    return [completed,gameend,winner];
 }
 
 /**
