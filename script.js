@@ -99,14 +99,28 @@ function getStates(){
     [0, 4, 8], // 斜め：左上から右下 (7)
     [2, 4, 6]  // 斜め：右上から左下 (8)
   ];
+    if (check_complete()) {
+        got_match = true
+    }
+  function check_complete() {
     let results = $("td").get()
     let completed = false
-for(let ct=0;ct<complete_patterns.length;ct++){
-    let pattern = complete_patterns[cnt]
-    let cell1 = $(results[pattern[0]]).html()
+ 
+    // そろう8パターンがあるかチェック
+    for (let cnt = 0; cnt < complete_patterns.length; cnt++) {
+      // 1つのパターンを抽出し、そのパターンのセル番号をさらに抽出
+      let pattern = complete_patterns[cnt]
+      // チェック対象の3つのセルを抽出
+      let cell1 = $(results[pattern[0]]).html()
       let cell2 = $(results[pattern[1]]).html()
       let cell3 = $(results[pattern[2]]).html()
-      
+      // 3つのセルの内容が等しいか確認（undefined や "" で全て一致することを避けるため、cell1 だけ中身をチェック）
+      completed = cell1 && cell1 == cell2 && cell2 == cell3 && cell3 == cell1
+      // 1つでもそろった行・列がある場合はチェックを終了
+      if (completed) break
+    }
+    return completed
+  }
 }
     return [completed,gameend,winner];
 }
