@@ -89,16 +89,6 @@ function updateStates(rowIndex,columnIndex){
  * @returns {[false,undefined,undefined]|[true,false,undefined]|[true,true,markNumType]}
  */
 function getStates(){
-    const complete_patterns = [
-    [0, 3, 6], // 1列目 (1)
-    [1, 4, 7], // 2列目 (2)
-    [2, 5, 8], // 3列目 (3)
-    [0, 1, 2], // 1行目 (4)
-    [3, 4, 5], // 2行目 (5)
-    [6, 7, 8], // 3行目 (6)
-    [0, 4, 8], // 斜め：左上から右下 (7)
-    [2, 4, 6]  // 斜め：右上から左下 (8)
-  ];
     let got_match =false
       let h = undefined
       let winner =　undefined
