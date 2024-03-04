@@ -92,8 +92,13 @@ function getStates(){
     let got_match =false
       let h = undefined
       let winner =　undefined
-      /*if(tableArrs[1][2]==1&&)
-      */
+      if(tableArrs[1][1]==1&&tableArrs[1][2]==1&&tableArrs[1][3]==1）{
+      got_match=true
+      h=true
+      winner=markNumType
+      
+      }
+      
       
  
     return [got_match,h,winner];
