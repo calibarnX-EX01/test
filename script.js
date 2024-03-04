@@ -92,7 +92,8 @@ function getStates(){
     let got_match =false
       let h = undefined
       let winner =　undefined
-      
+      /*if(tableArrs[1][2])
+      */
       
  
     return [got_match,h,winner];
