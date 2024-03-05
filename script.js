@@ -109,9 +109,9 @@ function getStates(){
         let square3 = (board[patterns[2]]);
         completed = square1 && square1 == square2 && square2 == square3 && square3 == square1;
         if (completed) {
-            let got_match =false
-      let h = undefined
-      let winner = 
+            let got_match =true
+      let h = true
+      let winner = turnNum
         }
    }
 
