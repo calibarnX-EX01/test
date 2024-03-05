@@ -92,12 +92,27 @@ function getStates(){
     let got_match =false
       let h = undefined
       let winner =　undefined
-      if(tableArrs[1][1]==1&&tableArrs[1][2]==1&&tableArrs[1][3]==1）{
-      got_match=true
-      h=true
-      winner=markNumType
-      
-      }
+      const win_patterns = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+];
+   for (let i = 0; i < win_patterns.length; i++) {
+        let patterns = win_patterns[i];
+        let square1 = (board[patterns[0]]);
+        let square2 = (board[patterns[1]]);
+        let square3 = (board[patterns[2]]);
+        completed = square1 && square1 == square2 && square2 == square3 && square3 == square1;
+        if (completed) {
+            
+        }
+   }
+
       
       
  
