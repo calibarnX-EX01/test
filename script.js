@@ -93,10 +93,11 @@ function getStates(){
       let h = undefined
       let winner =　undefined
    for (let i = 0; i < tableArrs.length; i++) {
-     for(let k = 0; k < tableArrs.length; k++){
-         
-     }
-        if () {
+    let pattern = tableArrs[i]
+       let cell1 = $(results[pattern[0]]).html()
+      let cell2 = $(results[pattern[1]]).html()
+      let cell3 = $(results[pattern[2]]).html()
+        if (cell1 && cell1 == cell2 && cell2 == cell3 && cell3 == cell1) {
             let got_match =true
       let h = true
       let winner = turnNum
