@@ -88,6 +88,16 @@ function updateStates(rowIndex,columnIndex){
  * ゲーム終了であるが、勝敗が決まらなかった場合は、3つ目の要素は「undefined」とする。
  * @returns {[false,undefined,undefined]|[true,false,undefined]|[true,true,markNumType]}
  */
+const win_patterns = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+];
 function getStates(){
     let got_match =false
       let h = undefined
