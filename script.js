@@ -118,7 +118,7 @@ function getStates(){
       
       
  
-    return [got_match,h,winner];
+    return [got_match];
 }
 
 /**
