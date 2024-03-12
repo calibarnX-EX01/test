@@ -88,40 +88,17 @@ function updateStates(rowIndex,columnIndex){
  * ゲーム終了であるが、勝敗が決まらなかった場合は、3つ目の要素は「undefined」とする。
  * @returns {[false,undefined,undefined]|[true,false,undefined]|[true,true,markNumType]}
  */
-const win_patterns = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
-];
+
 function getStates(){
-    let k = [3]
-    let got_match =false
-      let h = undefined
-      let winner =　undefined
-    let results = $("td").get()
-   for (let i = 0; i < tableArrs.length; i++) {
-    let pattern = tableArrs[i]
-       let cell1 = $(results[pattern[0]]).html()
-      let cell2 = $(results[pattern[1]]).html()
-      let cell3 = $(results[pattern[2]]).html()
-        if (cell1 && cell1 == cell2 && cell2 == cell3 && cell3 == cell1) {
-            let got_match =true
-      let h = true
-      let winner = turnNum
-        }
+    
+   
+        
    }
 
-      k[1]=got_match
-k[2]=h
-k[3]=winner
+     
       
  
-    return [k];
+    return
 }
 
 /**
