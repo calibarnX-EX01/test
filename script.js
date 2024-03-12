@@ -89,16 +89,14 @@ function updateStates(rowIndex,columnIndex){
  * @returns {[false,undefined,undefined]|[true,false,undefined]|[true,true,markNumType]}
  */
 
-function getStates(){
-    
-   
+function getStates(cnt ){
+    let got_match = false;
+    let decided = undefined;
+    let winner = undefined;
+    if(cnt>=9){
+        got_match = true
         
-   }
-
-     
-      
- 
-    return
+    }
 }
 
 /**
