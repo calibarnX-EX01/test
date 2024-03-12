@@ -126,7 +126,7 @@ function clickEvent(e){
     updateStates(rowIndex,columnIndex);/* 変数の値を更新 */
 
     viewMark(turnMarkEle,turnNum);/* 次のターンの記号を案内表示 */
-    const states = getStates();/* ゲーム状況を取得 */
+    const states = getStates(cnt);/* ゲーム状況を取得 */
     if(states[0]){/* ゲームが終了していれば... */
         const [,...finishArgs] = states;/* 対戦結果を取得 */
         doFinish(finishArgs);/* 対戦結果からリザルト表示と、ゲーム終了処理 */
