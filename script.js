@@ -99,6 +99,7 @@ const win_patterns = [
     [2, 4, 6]
 ];
 function getStates(){
+    let k = [3]
     let got_match =false
       let h = undefined
       let winner =　undefined
@@ -115,10 +116,12 @@ function getStates(){
         }
    }
 
-      
+      k[1]=got_match
+k[2]=h
+k[3]=winner
       
  
-    return [got_match];
+    return [k];
 }
 
 /**
