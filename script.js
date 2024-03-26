@@ -94,19 +94,19 @@ function getStates(ct,Num,arrayData){
     let decided = undefined;
     let winner = undefined;
     const ary = [];
-    if(arrayData[1][1]==arrayData[1][2]==arrayData[1][3]==Num||arrayData[2][1]==arrayData[2][2]==arrayData[2][3]==Num||arrayData[3][1]==arrayData[3][2]==arrayData[3][3]==Num){
+    if(arrayData[0][0]==arrayData[0][1]==arrayData[0][2]==Num||arrayData[1][0]==arrayData[1][1]==arrayData[1][2]==Num||arrayData[2][0]==arrayData[2][1]==arrayData[2][2]==Num){
         got_match = true;
         decided = true;
         winner = Num;
         
         
-    }else if(arrayData[2][1]==arrayData[2][2]==arrayData[2][3]==Num||arrayData[3][1]==arrayData[3][2]==arrayData[3][3]==Num){
+    }else if(arrayData[1][0]==arrayData[1][1]==arrayData[1][2]==Num||arrayData[2][0]==arrayData[2][1]==arrayData[2][2]==Num){
         got_match = true;
         decided = true;
         winner = Num;
         
         
-    }else if(arrayData[1][1]==arrayData[2][2]==arrayData[3][3]==Num||arrayData[1][3]==arrayData[2][2]==arrayData[3][1]==Num){
+    }else if(arrayData[0][0]==arrayData[1][1]==arrayData[2][2]==Num||arrayData[0][2]==arrayData[1][1]==arrayData[2][0]==Num){
         got_match = true;
         decided = true;
         winner = Num
