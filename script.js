@@ -100,7 +100,7 @@ function getStates(ct,Num,arrayData){
         winner = Num;
         
         
-    }else if(){
+    }  /**else if(){
         got_match = true;
         decided = true;
         winner = Num;
@@ -111,7 +111,7 @@ function getStates(ct,Num,arrayData){
         decided = true;
         winner = Num
         
-    }else if(ct>=9){
+    }*/else if(ct>=9){
         got_match = true;
         decided = true;
     }
