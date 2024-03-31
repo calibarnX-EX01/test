@@ -100,7 +100,7 @@ function getStates(ct,Num,arrayData){
     ary[0]=got_match
     ary[1]=decided
     ary[2]=winner
-    
+    return ary
 }
 
 /**
