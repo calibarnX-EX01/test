@@ -98,7 +98,7 @@ function getStates(ct,Num,arrayData){
         got_match = true
         decided　= true
         winner = Num
-    } if(arrayData[0][0]==arrayData[1][1]==arrayData[2][2]==Num||arrayData[0][2]==arrayData[1][1]==arrayData[0][2]==Num){
+    } else if(arrayData[0][0]==arrayData[1][1]==arrayData[2][2]==Num||arrayData[0][2]==arrayData[1][1]==arrayData[0][2]==Num){
         got_match = true
         decided　= true
         winner = Num
