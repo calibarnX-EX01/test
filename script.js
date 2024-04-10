@@ -94,7 +94,7 @@ function getStates(ct,Num,arrayData){
     let decided = undefined;
     let winner = undefined;
     const ary = [];
-    if(arrayData[0][0]==arrayData[0][1]==arrayData[0][2]==Num||arrayData[1][0]==arrayData[1][1]==arrayData[1][2]==Num||arrayData[2][0]==arrayData[2][1]==arrayData[2][2]==Num){
+   /* if(arrayData[0][0]==arrayData[0][1]==arrayData[0][2]==Num||arrayData[1][0]==arrayData[1][1]==arrayData[1][2]==Num||arrayData[2][0]==arrayData[2][1]==arrayData[2][2]==Num){
         got_match = true
         decided　= true
         winner = Num
@@ -102,7 +102,7 @@ function getStates(ct,Num,arrayData){
         got_match = true
         decided　= true
         winner = Num
-    }else if(ct==9){
+    }else*/ if(ct==9){
         got_match=true
         decided=false
     }
