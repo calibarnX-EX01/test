@@ -95,26 +95,44 @@ function getStates(ct,Num,arrayData){
     let decided = undefined;
     let winner = undefined;
     const ary = [];
-   /* if(tableArrs[0][0]==tableArrs[1][0]==tableArrs[2][0]==1||tableArrs[0][0]==tableArrs[1][0]==tableArrs[2][0]==-1){
+    if(arrayData[0][0]==arrayData[0][1]==arrayData[0][2]==1||arrayData[0][0]==arrayData[0][1]==arrayData[0][2]==-1){
        got_match=true;
         decided=true;
         winner=Num*-1
         
-    }else if(tableArrs[0][0]==tableArrs[0][1]==tableArrs[0][1]==1||tableArrs[0][0]==tableArrs[0][1]==tableArrs[0][2]==-1){
+    }else if(arrayData[1][0]==arrayData[1][1]==arrayData[1][2]==1||arrayData[1][0]==arrayData[1][1]==arrayData[1][2]==-1){
        got_match=true;
         decided=true;
         winner=Num*-1
         
-    }else if(tableArrs[0][0]==tableArrs[0][1]==tableArrs[0][1]==1||tableArrs[0][0]==tableArrs[0][1]==tableArrs[0][2]==-1){
+    }else if(arrayDara[2][0]==arrayData[2][1]==arrayData[2][2]==1||arrayDara[2][0]==arrayData[2][1]==arrayData[2][2]==-1){
        got_match=true;
         decided=true;
         winner=Num*-1
-        
-    }
-    if(ct==9){
+    } else if(arrayDara[0][0]==arrayData[1][0]==arrayData[2][0]==1||arrayDara[0][0]==arrayData[1][0]==arrayData[2][0]==-1){
+       got_match=true;
+        decided=true;
+        winner=Num*-1
+    } else if(arrayDara[0][1]==arrayData[1][1]==arrayData[2][1]==1||arrayDara[0][1]==arrayData[1][1]==arrayData[2][1]==-1){
+       got_match=true;
+        decided=true;
+        winner=Num*-1
+    } else if(arrayDara[0][2]==arrayData[1][2]==arrayData[2][2]==1||arrayDara[0][2]==arrayData[1][2]==arrayData[2][2]==-1){
+       got_match=true;
+        decided=true;
+        winner=Num*-1
+    } else if(arrayDara[0][0]==arrayData[1][1]==arrayData[2][2]==1||arrayDara[0][0]==arrayData[1][1]==arrayData[2][2]==-1){
+       got_match=true;
+        decided=true;
+        winner=Num*-1
+    }else if(arrayDara[0][2]==arrayData[1][1]==arrayData[2][0]==1||arrayDara[0][2]==arrayData[1][1]==arrayData[2][0]==-1){
+       got_match=true;
+        decided=true;
+        winner=Num*-1
+    }else if(ct==9){
         got_match=true
         decided=false
-    }*/
+    }
     ary[0]=got_match
     ary[1]=decided
     ary[2]=winner
