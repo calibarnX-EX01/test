@@ -95,15 +95,26 @@ function getStates(ct,Num,arrayData){
     let decided = undefined;
     let winner = undefined;
     const ary = [];
-   /* if(arrayData[0][0]==arrayData[0][1]==arrayData[0][2]==Num||arrayData[1][0]==arrayData[1][1]==arrayData[1][2]==Num||arrayData[2][0]==arrayData[2][1]==arrayData[2][2]==Num){
-        got_match = true
-        decided　= true
-        winner = Num
-    } else if(arrayData[0][0]==arrayData[1][1]==arrayData[2][2]==Num||arrayData[0][2]==arrayData[1][1]==arrayData[0][2]==Num){
-        got_match = true
-        decided　= true
-        winner = Num
-    }else*/ if(ct==9){
+    const complete_patterns = [
+    [0, 3, 6], // 1列目 (1)
+    [1, 4, 7], // 2列目 (2)
+    [2, 5, 8], // 3列目 (3)
+    [0, 1, 2], // 1行目 (4)
+    [3, 4, 5], // 2行目 (5)
+    [6, 7, 8], // 3行目 (6)
+    [0, 4, 8], // 斜め：左上から右下 (7)
+    [2, 4, 6]  // 斜め：右上から左下 (8)
+        ]
+  let results = $("td").get() 
+    for(t=0;t<complete_patterns.length;t++){
+      let pattern = complete_patterns[t]
+      if(arrayData==pattern){
+          got_match=true
+          decided= true
+          winner = Num*1
+      }
+    }
+    if(ct==9){
         got_match=true
         decided=false
     }
