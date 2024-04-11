@@ -65,7 +65,7 @@ function isAbleToMark(rowIndex,columnIndex){
        a=true; 
     }else{
            a=false;
-        console.log(tableArrs[rowIndex][columnIndex])
+      
     }
     return a;
 }
